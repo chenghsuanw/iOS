@@ -24,6 +24,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         // 變更分隔線顏色
         tableView.separatorColor = UIColor(red: 127/255, green: 255/255, blue: 212/255, alpha: 0.5)
+        // 設定畫面標題
+        title = restaurant.name
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
