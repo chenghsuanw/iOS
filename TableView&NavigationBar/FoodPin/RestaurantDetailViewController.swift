@@ -28,6 +28,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         title = restaurant.name
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 避免滑動時隱藏navigation bar
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
