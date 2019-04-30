@@ -18,6 +18,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         restaurantImageView.image = UIImage(named: restaurant.image)
         tableView.backgroundColor = UIColor(red: 189/255, green: 252/255, blue: 201/255, alpha: 0.5)
         // 移除空白列的分隔線

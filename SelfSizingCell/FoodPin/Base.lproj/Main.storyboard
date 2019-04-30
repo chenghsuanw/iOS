@@ -121,7 +121,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-N2-tZC">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-N2-tZC">
                                                             <rect key="frame" x="120.5" y="0.0" width="224.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -134,6 +134,8 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="BgK-hT-hCg" firstAttribute="top" secondItem="Tsd-H2-1Aa" secondAttribute="top" constant="7.5" id="IHO-0b-zvJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="BgK-hT-hCg" secondAttribute="bottom" constant="7.5" id="VMd-xp-fFU"/>
                                                 <constraint firstItem="BgK-hT-hCg" firstAttribute="centerY" secondItem="Tsd-H2-1Aa" secondAttribute="centerY" id="esN-zm-ae7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="BgK-hT-hCg" secondAttribute="trailing" id="n7n-Sq-NrD"/>
                                                 <constraint firstItem="BgK-hT-hCg" firstAttribute="leading" secondItem="Tsd-H2-1Aa" secondAttribute="leadingMargin" id="qj3-Re-YRJ"/>
