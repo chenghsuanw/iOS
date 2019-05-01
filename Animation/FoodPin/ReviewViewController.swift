@@ -21,15 +21,15 @@ class ReviewViewController: UIViewController {
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
         // 設定初始狀態
-        containerView.transform = CGAffineTransform.init(translationX: 0, y: -1000)
+        containerView.transform = CGAffineTransform.init(scaleX: 0, y: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // 動畫內容
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
             self.containerView.transform = CGAffineTransform.identity
-        }
+        }, completion: nil)
     }
     /*
     // MARK: - Navigation
