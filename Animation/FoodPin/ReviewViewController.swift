@@ -11,6 +11,7 @@ import UIKit
 class ReviewViewController: UIViewController {
 
     @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,17 @@ class ReviewViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
+        // 設定初始狀態
+        containerView.transform = CGAffineTransform.init(scaleX: 0, y: 0)
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 動畫內容
+        UIView.animate(withDuration: 0.3) {
+            self.containerView.transform = CGAffineTransform.identity
+        }
+    }
     /*
     // MARK: - Navigation
 
