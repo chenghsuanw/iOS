@@ -15,6 +15,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant:Restaurant!
     
+    // 解除segue後回到此view controller
+    @IBAction func close(segue:UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
