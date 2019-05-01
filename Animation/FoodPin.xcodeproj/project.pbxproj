@@ -13,6 +13,7 @@
 		9F16DC55223FD275001128EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F16DC53223FD275001128EA /* LaunchScreen.storyboard */; };
 		9F16DC5D223FD75A001128EA /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16DC5C223FD75A001128EA /* RestaurantTableViewController.swift */; };
 		9F16DC5F223FE403001128EA /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16DC5E223FE403001128EA /* RestaurantTableViewCell.swift */; };
+		9F3F40DD2279C59D009A89FD /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F40DC2279C59D009A89FD /* ReviewViewController.swift */; };
 		9F4CCDC4227187F2000F67DB /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CCDC3227187F2000F67DB /* RestaurantDetailTableViewCell.swift */; };
 		9F6664D22270827700AFC75E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6664D12270827700AFC75E /* Restaurant.swift */; };
 		9F67AA6A2247C69500028006 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67AA692247C69500028006 /* RestaurantDetailViewController.swift */; };
@@ -27,6 +28,7 @@
 		9F16DC56223FD275001128EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F16DC5C223FD75A001128EA /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		9F16DC5E223FE403001128EA /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		9F3F40DC2279C59D009A89FD /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		9F4CCDC3227187F2000F67DB /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9F6664D12270827700AFC75E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		9F67AA692247C69500028006 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				9F16DC5E223FE403001128EA /* RestaurantTableViewCell.swift */,
 				9F67AA692247C69500028006 /* RestaurantDetailViewController.swift */,
 				9F4CCDC3227187F2000F67DB /* RestaurantDetailTableViewCell.swift */,
+				9F3F40DC2279C59D009A89FD /* ReviewViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				9F6664D22270827700AFC75E /* Restaurant.swift in Sources */,
 				9F16DC5D223FD75A001128EA /* RestaurantTableViewController.swift in Sources */,
+				9F3F40DD2279C59D009A89FD /* ReviewViewController.swift in Sources */,
 				9F16DC5F223FE403001128EA /* RestaurantTableViewCell.swift in Sources */,
 				9F4CCDC4227187F2000F67DB /* RestaurantDetailTableViewCell.swift in Sources */,
 				9F67AA6A2247C69500028006 /* RestaurantDetailViewController.swift in Sources */,
