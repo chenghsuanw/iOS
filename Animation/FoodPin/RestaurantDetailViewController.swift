@@ -19,7 +19,21 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBAction func close(segue:UIStoryboardSegue) {
         
     }
-    
+    // 按下評價後解除segue, 呼叫此function
+    @IBAction func ratingButtonTapped(segue: UIStoryboardSegue) {
+        if let rating = segue.identifier {
+            restaurant.isCheckIn = true
+            
+            switch rating {
+            case "great": restaurant.rating = "Absolutely love it! Must try."
+            case "good": restaurant.rating = "Pretty good."
+            case "dislike": restaurant.rating = "I don't like it."
+            default: break
+            }
+        }
+        
+        tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -44,6 +58,13 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showReview" {
+            let reviewViewController = segue.destination as! ReviewViewController
+            reviewViewController.restaurant = restaurant
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -63,7 +84,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.valueLabel.text = restaurant.location
         case 3:
             cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = (restaurant.isCheckIn) ? "Yes, I've been here before" : "No"
+            cell.valueLabel.text = (restaurant.isCheckIn) ? "Yes, I've been here before. \(restaurant.rating)" : "No"
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

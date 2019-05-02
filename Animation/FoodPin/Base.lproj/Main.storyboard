@@ -198,7 +198,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-pS-vaF">
                                 <rect key="frame" x="37" y="40" width="301" height="420"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrafina" translatesAutoresizingMaskIntoConstraints="NO" id="WBD-e6-sFa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrafina" translatesAutoresizingMaskIntoConstraints="NO" id="WBD-e6-sFa">
                                         <rect key="frame" x="0.0" y="0.0" width="301" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="ibn-W7-ofS"/>
@@ -220,6 +220,9 @@
                                                 <state key="normal" title="Absolutely love it!">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="dOM-A6-z4J" kind="unwind" identifier="great" unwindAction="ratingButtonTappedWithSegue:" id="BER-kF-z9M"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-nz-GzR">
                                                 <rect key="frame" x="79.5" y="50" width="126" height="44.5"/>
@@ -231,6 +234,9 @@
                                                 <state key="normal" title="Good">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="dOM-A6-z4J" kind="unwind" identifier="good" unwindAction="ratingButtonTappedWithSegue:" id="mdJ-lQ-YLa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIu-TO-7zT">
                                                 <rect key="frame" x="79.5" y="99.5" width="126" height="45"/>
@@ -242,6 +248,9 @@
                                                 <state key="normal" title="I don't like it">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="dOM-A6-z4J" kind="unwind" identifier="dislike" unwindAction="ratingButtonTappedWithSegue:" id="KLz-Xr-031"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -290,6 +299,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="TfB-zr-L7w" id="zj0-nB-YkC"/>
                         <outlet property="containerView" destination="2jO-pS-vaF" id="j5J-Nq-1Yn"/>
+                        <outlet property="restaurantImageView" destination="WBD-e6-sFa" id="Io3-PX-VFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsC-pX-iEj" userLabel="First Responder" sceneMemberID="firstResponder"/>

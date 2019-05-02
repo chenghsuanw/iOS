@@ -12,9 +12,13 @@ class ReviewViewController: UIViewController {
 
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var restaurantImageView: UIImageView!
+    
+    var restaurant: Restaurant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        restaurantImageView.image = UIImage(named: restaurant.image)
         // 圖片模糊效果
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
