@@ -17,6 +17,7 @@
 		9F4CCDC4227187F2000F67DB /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CCDC3227187F2000F67DB /* RestaurantDetailTableViewCell.swift */; };
 		9F6664D22270827700AFC75E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6664D12270827700AFC75E /* Restaurant.swift */; };
 		9F67AA6A2247C69500028006 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67AA692247C69500028006 /* RestaurantDetailViewController.swift */; };
+		9F6A88F2227F010100B0680C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6A88F1227F010100B0680C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9F4CCDC3227187F2000F67DB /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9F6664D12270827700AFC75E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		9F67AA692247C69500028006 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		9F6A88F1227F010100B0680C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6A88F2227F010100B0680C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +53,7 @@
 			children = (
 				9F16DC49223FD274001128EA /* FoodPin */,
 				9F16DC48223FD274001128EA /* Products */,
+				9F6A88F0227F010100B0680C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				9F3F40DC2279C59D009A89FD /* ReviewViewController.swift */,
 			);
 			path = FoodPin;
+			sourceTree = "<group>";
+		};
+		9F6A88F0227F010100B0680C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A88F1227F010100B0680C /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +123,11 @@
 				TargetAttributes = {
 					9F16DC46223FD274001128EA = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

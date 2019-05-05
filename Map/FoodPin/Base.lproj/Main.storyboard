@@ -104,6 +104,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" id="EVn-tU-zon">
+                                    <rect key="frame" x="0.0" y="364" width="375" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="S94-wH-PPr" customClass="RestaurantDetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="328" width="375" height="36"/>
@@ -176,8 +180,10 @@
                         <viewLayoutGuide key="safeArea" id="Mtb-Lq-D7X"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="EVn-tU-zon" id="UOE-mz-Daj"/>
                         <outlet property="restaurantImageView" destination="wDx-vX-7Zf" id="qbT-jI-DYM"/>
                         <outlet property="tableView" destination="5lT-Pd-aFf" id="Pe0-gr-fAQ"/>
+                        <segue destination="5Nv-2W-zdG" kind="show" identifier="showMap" id="xPj-aO-O40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br0-e6-D09" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,6 +312,32 @@
                 <exit id="dOM-A6-z4J" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1956" y="859.52023988005999"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fyn-dO-blC">
+            <objects>
+                <viewController id="5Nv-2W-zdG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TKb-KN-FA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-l2-Srg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T1N-l2-Srg" firstAttribute="top" secondItem="TKb-KN-FA3" secondAttribute="top" id="9Ds-J1-DHA"/>
+                            <constraint firstItem="T1N-l2-Srg" firstAttribute="trailing" secondItem="UM5-EJ-TZy" secondAttribute="trailing" id="X80-J5-e0H"/>
+                            <constraint firstItem="T1N-l2-Srg" firstAttribute="bottom" secondItem="UM5-EJ-TZy" secondAttribute="bottom" id="lCH-WJ-btN"/>
+                            <constraint firstItem="T1N-l2-Srg" firstAttribute="leading" secondItem="UM5-EJ-TZy" secondAttribute="leading" id="nEh-Ka-gEk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UM5-EJ-TZy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEV-Bc-dGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="1675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8l0-tR-Ixb">

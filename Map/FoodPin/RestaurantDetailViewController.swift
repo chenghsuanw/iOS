@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var mapView:MKMapView!
     
     var restaurant:Restaurant!
     
@@ -42,12 +44,18 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         restaurantImageView.image = UIImage(named: restaurant.image)
         tableView.backgroundColor = UIColor(red: 189/255, green: 252/255, blue: 201/255, alpha: 0.5)
-        // 移除空白列的分隔線
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+//        // 移除空白列的分隔線
+//        tableView.tableFooterView = UIView(frame: CGRect.zero)
         // 變更分隔線顏色
         tableView.separatorColor = UIColor(red: 127/255, green: 255/255, blue: 212/255, alpha: 0.5)
         // 設定畫面標題
         title = restaurant.name
+        let tapGestureRecongnizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
+        mapView.addGestureRecognizer(tapGestureRecongnizer)
+    }
+    
+    @objc func showMap() {
+        performSegue(withIdentifier: "showMap", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
